@@ -1,5 +1,5 @@
 """
-ASGI config for aishfit project.
+ASGI config for aisyahdjango project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'aishfit.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'aisyahdjango.settings')
 
 application = get_asgi_application()
