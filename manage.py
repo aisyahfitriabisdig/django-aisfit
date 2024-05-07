@@ -6,11 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-<<<<<<< HEAD
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'aisyahdjango.settings')
-=======
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ais_site.settings')
->>>>>>> parent of 6ec07b0 (Delete)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
