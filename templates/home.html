@@ -7,91 +7,158 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     /* Custom CSS */
-    .header-logo {
-      font-size: 36px;
-      font-weight: bold;
-      color: #e591a9; /* Warna hijau cerah */
-      text-transform: uppercase;
+    body {
+      background-color: #c4d1ea; /* Warna latar belakang keseluruhan */
     }
-    .header-slogan {
-      font-size: 20px;
-      color: #c17878; /* Warna putih untuk kontras dengan latar belakang */
-    }
-    /* Latar belakang header dengan warna menarik */
     .navbar-custom {
-      background-color: #0f7cc0; /* Warna oranye yang mencolok */
+      background-color: #34749c; /* Warna oranye yang mencolok */
     }
-    /* Custom deskripsi */
     .description {
-      background-color: #cba6b1; /* Warna latar belakang untuk deskripsi */
+      background-color: #f8f9fa; /* Warna latar belakang untuk deskripsi */
       padding: 20px;
       text-align: center;
       margin-top: 20px;
+      border-radius: 20px; /* Sudut bulat */
     }
     .description-text {
       font-size: 18px;
-      color: #485c71; /* Warna teks */
+      color: #495057; /* Warna teks */
     }
-    /* Latar belakang keseluruhan */
-    body {
-      background-color: #424b61; /* Warna latar belakang keseluruhan */
+    .discount-box {
+      background-color: #9baad3; /* Warna latar belakang untuk kotak diskon */
+      padding: 30px;
+      margin-top: 20px;
+      border-radius: 20px; /* Sudut bulat */
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+      transition: all 0.3s ease-in-out; /* Animasi perubahan */
+    }
+    .discount-box:hover {
+      transform: translateY(-5px); /* Mengangkat kotak saat hover */
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Bayangan yang lebih tebal saat hover */
+    }
+    .discount-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #3c4f76; /* Warna teks untuk judul diskon */
+    }
+    .discount-description {
+      font-size: 18px;
+      color: #607ea9; /* Warna teks untuk deskripsi diskon */
+    }
+    footer {
+      background-color: #34749c; /* Warna biru */
+      background-image: url('footer-background.jpg'); /* Gambar latar belakang untuk footer */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 20px 0; /* Padding atas dan bawah */
+      text-align: center; /* Pusatkan teks */
+    }
+    .footer-text {
+      font-size: 12px; /* Ukuran teks lebih kecil */
+      color: #000306; /* Warna teks */
+    }
+
+    /* CSS untuk bagian Home */
+    .home-section {
+      background-image: url('path/to/your/image.jpg'); /* Ganti dengan URL gambar yang ingin Anda gunakan */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 100px 0; /* Sesuaikan dengan kebutuhan Anda */
+    }
+
+    /* CSS untuk mengatur ukuran logo */
+    .header-logo img {
+      width: 120px; /* Sesuaikan lebar gambar logo */
+      height: auto; /* Biarkan tinggi otomatis menyesuaikan proporsi */
     }
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light navbar-custom"> <!-- Menggunakan kelas navbar-custom untuk latar belakang kustom -->
+<!-- Header -->
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+    <div class="container">
+      <!-- Logo moved inside navbar -->
+      <a class="navbar-brand" href="#">
+        <span class="header-logo">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEhtHN-xxF8eAmBcQQq6NLdD3w5UMGDIsTbrOueUzvuVN0Q4fh1E_myG1wExuw3G67gzGwL1r5SnmofyeuWdrDzVrsbgf2y5y_geSrTverfuftCXtqgLJlKbI8kzqAQMskxd42-HN7Y6t6tSBT1-uEpyRq8G8Cq_cOApp3fa72brxEImEADb_YP6xF0Cw/s320/Untitled%20design.png" alt="SavorSavings Logo">
+        </span>
+      </a>
+      <!-- End Logo -->
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <!-- Form pencarian dipindahkan ke sini -->
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Home Section -->
+<section class="home-section">
   <div class="container">
-    <a class="navbar-brand" href="#">
-      <!-- Teks logo "SavorSavings" -->
-      <span class="header-logo">SavorSavings</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Categories</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+    <div class="row justify-content-around">
+      <div class="col-md-3">
+        <div class="discount-box">
+          <h3 class="discount-title">Limited Time Offer</h3>
+          <p class="discount-description">Get 50% Off on Electronics!</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="discount-box">
+          <h3 class="discount-title">Flash Sale</h3>
+          <p class="discount-description">Buy 1 Get 1 Free on Clothing!</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="discount-box">
+          <h3 class="discount-title">Exclusive Deal</h3>
+          <p class="discount-description">30% Off on Home Decor!</p>
+        </div>
+      </div>
     </div>
   </div>
-</nav>
+</section>
 
-<div class="container mt-4">
-  <div class="row">
-    <div class="col text-center">
-      <!-- Slogan dengan warna putih -->
-      <h2 class="header-slogan">Find the best discounts for your favorite products!</h2>
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="footer-text">© 2024 AISYAH FITRIA. All rights reserved.</p>
+      </div>
     </div>
   </div>
-</div>
+</footer>
 
-<div class="container description">
-  <div class="row">
-    <div class="col">
-      <p class="description-text">SavorSavings offers you exclusive deals and discounts on a wide range of products. Browse through our collection and enjoy great savings on your favorite items!</p>
-    </div>
-  </div>
-</div>
-
+<!-- JavaScript dependencies -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
